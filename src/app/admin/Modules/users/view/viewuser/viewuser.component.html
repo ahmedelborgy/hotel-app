@@ -1,0 +1,22 @@
+<section class="container py-4 card">
+<a class="text-end d-block myPointer" (click)="onNoClick()"><i class="fa-regular fa-2x fa-circle-xmark text-danger"></i></a>
+
+    <div class="p-3">
+     <h3 class="p-2 font">User details</h3>
+        <div class="text-center pb-3">
+            <img [src]="data.profileImage" class="w-75" alt="">
+        </div>
+        <div class="data font">
+            <span class="fw-bold fs-4">Name :</span><span class="fs-5 ps-2">{{data.userName}}</span><br>
+            <span class="fw-bold fs-4">Email :</span><span class="fs-5 ps-2">{{data.email}}</span><br>
+            <span class="fw-bold fs-4">Country :</span><span class="fs-5 ps-2">{{data.country}}</span><br>
+            <span class="fw-bold fs-4">PhoneNumber :</span><span class="fs-5 ps-2">{{data.phoneNumber}}</span>
+            <hr>
+        </div>
+        
+        
+    </div>
+    <div class="text-end">
+        <button mat-button class="btn " (click)="onNoClick()"><span></span>Close</button>
+    </div>
+</section>

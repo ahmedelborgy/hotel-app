@@ -1,0 +1,58 @@
+<section>
+  <div class="container d-flex align-items-center justify-content-center">
+    <div class="row py-5">
+      <div class="text-center">
+        <h2>Payment</h2>
+        <p class="style">Kindly follow the instructions below</p>
+      </div>
+      <div class="col-md-6 ">
+        <h6>Transfer pembayaran:</h6>
+        <h6>Tax:10%</h6>
+        <h6>Sub total:$420 USD</h6>
+        <h6>Total:$580 USD</h6>
+        <img src="../../../../assets/images/logo_bank.png" class="d-inline"><h6 class="">Bank Central Asia<br>
+        2208 1996<br>
+      BuildWith Angga</h6>
+      <img src="../../../../assets/images/logo_bank (1).png" class="d-inline"><h6 class="">Bank Mandiri<br>
+        2208 1996<br>
+      BuildWith Angga</h6>
+      </div>
+      <div class="col-md-6">
+        <h6>Enter your card Number:</h6>
+        <ngx-stripe-elements
+        [stripe]="stripe"
+        [elementsOptions]="elementsOptions">
+        <ngx-stripe-card [options]="cardOptions" />
+      </ngx-stripe-elements>
+      <br>
+      <h6>name:</h6>
+        <mat-form-field class="example-full-width w-100" appearance="fill">
+          <input matInput placeholder="name"  />
+        </mat-form-field>
+        <br>
+        <h6>Email:</h6>
+        <mat-form-field class="example-full-width w-100" appearance="fill">
+          <input matInput placeholder="Email" type="email"  />
+        </mat-form-field> 
+        
+  
+      </div>
+      <div class="d-flex justify-content-center mt-2">
+        <button type="submit" class="w-25 main" (click)="createToken()">
+          Submit
+        </button>
+      </div>
+    
+    </div>
+  </div>
+ 
+</section>
+    <!-- <div [formGroup]="checkoutForm"> -->
+      <!-- <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput placeholder="name" formControlName="name" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput placeholder="Email" type="email" formControlName="email" />
+      </mat-form-field> -->
+      
+    <!-- </div> -->

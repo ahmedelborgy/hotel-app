@@ -1,0 +1,26 @@
+<section class="p-4 px-5">
+  <div class="d-flex flex-row-reverse">
+    <a (click)="onNoClick()" class="myPointer"><i class="fa-regular fa-circle-xmark text-danger fa-2x"></i></a>
+
+  </div>
+  <div class=" d-flex justify-content-center align-items-center flex-column">
+    <img src="../../../../../../assets/images/Delete-image.png" alt="">
+
+    <h2 ngClass="data.name.length==0?visually-hidden:d-block">
+      <p>are you sure you want Delete (<span class="text-danger">{{data.roomNumber}}
+      </span>) ?
+    </h2>
+
+    <p> if you are sure just click on delete it</p>
+
+    <p class=" d-block"></p>
+  </div>
+  <div class="horizontal-line "></div>
+  <div class="d-flex flex-row-reverse">
+
+    <button [mat-dialog-close]="data._id" type="submit" class="btn btn-outline-danger my-2 ">
+      Delete this item
+    </button>
+
+  </div>
+</section>

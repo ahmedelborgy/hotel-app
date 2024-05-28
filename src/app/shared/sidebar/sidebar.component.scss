@@ -1,0 +1,67 @@
+.sidebar {
+  background-color: #3252DF;
+  min-height: 100vh;
+
+  ul {
+    padding: 0 0 0 10px;
+
+    li {
+      list-style: none;
+      cursor: pointer;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.5; /* Changed from '.5' to '0.5' */
+
+      a {
+        width: 76%;
+        display: block;
+        border-radius: 15px;
+        padding: 10px 0; /* Changed 'padding-block' to 'padding' */
+
+        span {
+          i {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .style {
+    color: rgba(234, 234, 234, 0.932);
+  }
+
+  .bg-main-transparent {
+    background-color: #6aaaff3c;
+    color: #ef9b28 !important;
+    padding-right: 4px;
+
+    i {
+      color: #192454 !important;
+    }
+  }
+}
+
+.arrows {
+  background-color: #1a2e88;
+  position: absolute;
+  right: -28px;
+  top: 75px;
+  width: fit-content;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+
+  i {
+    width: 20px;
+    color: #fff;
+    font-weight: 900; /* Removed extra spaces around the value */
+  }
+}
+
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}

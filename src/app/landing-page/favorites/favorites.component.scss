@@ -1,0 +1,171 @@
+.creatBy {
+  color: #B0B0B0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+}
+
+
+
+
+.imag {
+  width: 380px;
+  border: #555 solid 8px;
+  border-radius: 5px;
+}
+
+.imag-img2 {
+  position: relative;
+}
+
+
+.imgHeight2 {
+  height: 16rem;
+}
+
+.imag-captain {
+  color: #fff;
+  bottom: 15px;
+  left: 20px;
+  padding: 10px;
+  position: absolute;
+  border-radius: 5px;
+  transition: all .7s;
+  opacity: 1;
+}
+
+
+.imag-price {
+  background-color: rgba(255, 73, 139, 1);
+  color: #fff;
+  top: 0;
+  right: 0;
+  padding: 10px 10px 4px 10px;
+  position: absolute;
+  border-radius: 0 16px 0 16px ;
+  transition: all .7s;
+  opacity: 1;
+}
+
+
+.imag-img2 {
+  position: relative;
+  top: 33px;
+  left: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 380px;
+}
+
+.imag-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  background-color: rgba(19, 46, 95, 0.4);
+  top: 110%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  border-radius: 15px;
+  transition: all .7s;
+  opacity: 0;
+  height: 16rem;
+}
+
+.imag-icon i {
+  margin-right: 20px;
+  transform: scale(1.5);
+  font-size: 18px;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+.imag-icon i:hover {
+  color: rgb(28, 52, 102);
+}
+
+.imag-img2:hover .imag-icon {
+  opacity: 1;
+  top: 0;
+}
+
+
+
+
+// *SECTION
+
+
+.imag-img3 {
+  position: relative;
+  top: 33px;
+  left: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 380px;
+}
+
+
+.imag-icon3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  color: #fff;
+  background-color: rgba(19, 46, 95, 0.4);
+  top: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  border-radius: 15px;
+  transition: all .7s;
+  opacity: 0;
+  width: 100%;
+  margin-inline:auto ;
+  // height: 15.41rem;
+}
+
+.imag-icon3 i {
+  margin-right: 20px;
+  transform: scale(1.5);
+  font-size: 18px;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+.imag-icon3 i:hover {
+  color: rgb(28, 52, 102);
+}
+
+.imag-img3:hover .imag-icon3 {
+  opacity: 1;
+  top: 0%;
+  // bottom: .1%;
+
+}
+
+.imag-price2 {
+  background-color: rgba(255, 73, 139, 1);
+  color: #fff;
+  top: 0;
+  right: 0px;
+  padding: 10px 10px 4px 10px;
+  position: absolute;
+  border-radius: 0 16px 0 16px ;
+  transition: all .7s;
+  opacity: 1;
+}
+
+
+
+.ms-44 {
+  margin-left: 33px;
+}

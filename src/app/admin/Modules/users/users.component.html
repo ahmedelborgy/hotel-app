@@ -1,0 +1,49 @@
+<section id="allUsers">
+    <div class="row py-5">
+        <div class="col-8">
+            <h2>Users Table Details</h2>
+            <p>You Can cheak all details</p>
+        </div>
+        
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="col">user Name</th>
+                <th class="col">ProfileImage</th>
+                <th class="col">Email</th>
+                <th class="col">Country</th>
+                <th class="col">Phone Number</th>
+                <th class="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of tableData">
+                <td>{{user.userName}}</td>
+                <td>
+                    <img class="profilePic" [src]="user.profileImage">
+                </td>
+                <td>{{user.email}}</td>
+                <td>{{user.country}}</td>
+                <td>{{user.phoneNumber}}</td>
+                <td>
+                    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                    <mat-icon>more_horiz</mat-icon>
+                  </button>
+                  <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="openViewUserDialog(user)">
+                      <mat-icon class="text-primary">visibility</mat-icon>
+                      <span>View</span>
+                    </button>
+                   
+                  </mat-menu>
+                  </td>
+        
+            </tr>
+        </tbody>
+    </table>
+    <mat-paginator [length]="totalCount" [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions" (page)="handlePageEvent($event)"
+    aria-label="Select page">
+</mat-paginator>
+</section>

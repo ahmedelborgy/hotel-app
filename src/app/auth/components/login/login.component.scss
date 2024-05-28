@@ -1,0 +1,66 @@
+@import "../../../../assets/styles/layout";
+
+.show-password{
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  transform: translate(-25%, -25%);
+}
+
+.logo {
+
+  span {
+    color: $text-main;
+  }
+}
+
+.bg-main {
+  background-color: $bg-main;
+}
+
+.image_form {
+  background-image: url(../../../../assets/images/login.png);
+  background-repeat:no-repeat ;
+  background-size: cover;
+  background-position: center center;
+}
+
+.full_height {
+  height: 90vh;
+}
+
+.form_height {
+  height: 70vh;
+}
+
+.row {
+  height: 100vh;
+  padding: 20px;
+}
+
+.title_form {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 20px;
+}
+
+
+label {
+  color: $dark-blue;
+ 
+}
+
+.ayes_icon {
+  background-color: #F5F6F8;
+i {
+  scale: 1.2;
+}
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-10 {
+  width: 10%;
+}

@@ -1,0 +1,89 @@
+<section>
+  <form [formGroup]="roomForm" (ngSubmit)="onSubmit(roomForm)">
+    <div class="row py-5">
+      <div class="col-9 mx-auto">
+        <div>
+          <div class="input-group mb-3 custom-input">
+            <span class="input-group-text px-3 py-3" id="basic-addon1"><i class="fa-solid fa-hashtag"></i></span>
+            <div class="y-line my-auto"></div>
+            <input type="text" class="form-control rounded-end py-1" placeholder="Room Number" aria-label="roomNumber"
+              aria-describedby="basic-addon1" formControlName="roomNumber">
+          </div>
+          <!-- <div *ngIf="roomForm.get('roomNumber')?.errors && roomForm.get('roomNumber')?.touched"
+            class="text-red m-0 mx-auto p-0 text-start block">
+            <span class="text-danger p-0 block" *ngIf="roomForm.get('roomNumber')?.getError('required')">room Number is
+              Required</span>
+          </div> -->
+        </div>
+        <div class="d-flex gap-4">
+          <div class="input-group mb-3 custom-input">
+            <span class="input-group-text px-3 py-3" id="basic-addon1"><i class="fa-solid fa-money-bill"></i></span>
+            <div class="y-line my-auto"></div>
+            <input type="text" class="form-control rounded-end py-1" placeholder="Price" aria-label="price"
+              aria-describedby="basic-addon1" formControlName="price">
+          </div>
+          <div class="input-group mb-3 custom-input">
+            <span class="input-group-text px-3 py-3" id="basic-addon1"><i class="fa-solid fa-warehouse"></i></span>
+            <div class="y-line my-auto"></div>
+            <input type="number" class="form-control rounded-end py-1" placeholder="capacity" aria-label="capacity"
+              aria-describedby="basic-addon1" formControlName="capacity">
+          </div>
+        </div>
+        <div class=" d-flex gap-3">
+          <div class="d-flex align-items-center justify-content-between w-50">
+            <div class="input-group mb-3 custom-input">
+              <span class="input-group-text px-3 py-3" id="basic-addon1">
+                <i class="fa-solid fa-money-bill-trend-up rotate-180"></i>
+              </span>
+              <div class="y-line my-auto"></div>
+              <input type="text" class="form-control rounded-end py-1" placeholder="Discount" aria-label="discount"
+                aria-describedby="basic-addon1" formControlName="discount">
+            </div>
+          </div>
+
+          <div class="selectors w-50">
+
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Facilities</mat-label>
+              <mat-select formControlName="facilities" multiple>
+                <mat-option>All</mat-option>
+                <mat-option *ngFor="let item of allFacilities" [value]="item._id">{{item.name}}</mat-option>
+              </mat-select>
+              <mat-icon matSuffix color="primary">storefront</mat-icon>
+            </mat-form-field>
+
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="justify-content-center align-items-center col-9 mx-auto">
+
+        <ngx-dropzone (change)="onSelect($event)" class="col-12" [multiple]="true" required>
+            <ngx-dropzone-label *ngIf="!imgSrc">Drag and Drop image 
+              <span class=" fw-bold">Choose image </span>to upload
+            </ngx-dropzone-label>
+            <ngx-dropzone-label *ngIf="imgSrc"> 
+              <ng-container *ngFor="let item of imgSrc">
+                <img [src]="item" alt="">
+              </ng-container>
+              
+                
+            </ngx-dropzone-label>
+          <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" class="">
+            <ngx-dropzone-label></ngx-dropzone-label>
+          </ngx-dropzone-image-preview>
+        </ngx-dropzone>
+      </div>
+      <div class="horizontal-line col-10 mx-auto my-4"></div>
+      <div class="col-9 mx-auto d-flex justify-content-end">
+        <div>
+          <button class=" mx-4 btn text-light-blue border-light-blue px-5" routerLink="/admin/rooms">cancel</button>
+          <button class="main px-4" type="submit">save</button>
+        </div>
+
+      </div>
+    </div>
+  </form>
+</section>

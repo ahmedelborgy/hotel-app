@@ -1,0 +1,59 @@
+<section id="addnewItem">
+    <div class="row  py-5">
+        <div class="col-8">
+            <h2>Comments Table Details</h2>
+            <p>You Can cheak all details</p>
+        </div>
+        
+    </div>
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="col">Room name</th>
+          <th class="col">Price</th>
+          <th class="col">Discount</th>
+          <th class="col">Capacity</th>
+          <th class="col">Active</th>
+          <th class="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+        <tr>
+          <td>Maryem</td>
+          <td>
+            200
+        </td>
+          <td>200</td>
+          <td>01068100888</td>
+          <td>maryemhaythamm@gmail.com</td>
+          <td>
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_horiz</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="openViewAdsDialog()" >
+              <mat-icon class="text-primary">visibility</mat-icon>
+              <span>View</span>
+            </button>
+            <button mat-menu-item  (click)="openDeleteAdsDialog()">
+              <mat-icon  class="text-primary">delete</mat-icon>
+              <span>Delete</span>
+            </button>
+          </mat-menu>
+          </td>
+
+        </tr>
+      </tbody> 
+        
+    </table>
+    <mat-paginator [length]="length"
+    [pageSize]="pageSize"
+    [pageIndex]="pageIndex"
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="handlePageEvent($event)"
+    aria-label="Select page">
+</mat-paginator>
+    
+    

@@ -1,0 +1,75 @@
+<section>
+  <div>
+    <!-- <div class="container">
+
+        <div id="home" class="row align-items-center justify-content-between">
+          <div class="col-6 text-white">
+            <h2 class=""><span>Welcome</span><span class="lead mx-3 text-name">Manager</span></h2>
+            <p class="my-5=">You can manage all about Staycation hotel</p>
+          </div>
+          <div class="col-6 text-end ">
+            <img src="../../../../assets/images/1685.jpg" class="width-img rounded-circle" alt="">
+        </div>
+
+        </div>
+      </div> -->
+  </div>
+  <div class="container-card">
+    <div class="row justify-content-center">
+      <div class="col-md-3 mb-4">
+        <div class="counter-card">
+          <div class="card-body">
+            <i class="fas fa-users"></i>
+            <h5 class="card-title">User Count</h5>
+            <p class="card-text">{{ userCount }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="counter-card">
+          <div class="card-body">
+            <i class="fas fa-user-shield"></i>
+            <h5 class="card-title">Admin Count</h5>
+            <p class="card-text">{{ adminCount }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="counter-card">
+          <div class="card-body">
+            <i class="fas fa-clipboard-list"></i>
+            <h5 class="card-title">Pending Bookings</h5>
+            <p class="card-text">{{ pendingBookings }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="counter-card">
+          <div class="card-body">
+            <i class="fas fa-check-circle"></i>
+            <h5 class="card-title">Completed Bookings</h5>
+            <p class="card-text">{{ completedBookings }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-evenly">
+      <div class="col-md-4">
+        <h4 class=" text-center">- Booking</h4>
+        <canvas id="bookingChart" class=" text-center">{{chart}}</canvas>
+      </div>
+
+      <div class="col-md-4 ">
+        <h4 class="text-center pb-5">- Users and Admins</h4>
+        <canvas id="usersChart" class=" h-75">{{newChart}}</canvas>
+      </div>
+    </div>
+  </div>
+
+
+</section>

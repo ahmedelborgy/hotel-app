@@ -1,0 +1,22 @@
+@import '../../../assets/styles/layout';
+.logo {
+    span {
+        color: $text-main;
+    }
+}
+.row{
+    h5{
+        color:rgb(31, 69, 143) !important;
+        font-family: Poppins;
+        font-size: 20px;
+    }
+    h6{
+        color: rgba(189, 189, 189, 0.845);
+        font-family: Poppins;
+        font-size: 18px;
+    }
+    
+}
+p{
+    color: rgba(189, 189, 189, 0.845);
+}

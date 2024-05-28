@@ -1,0 +1,121 @@
+<section class="register">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    <h1 class="logo mb-5 style-font"><span class="main-text ">Stay</span>cation.</h1>
+                </div>
+                <div class="signup-design">
+                    <h3>Sign up</h3>
+                    <p>If you don’t have an account register <br>You can <a class="text-decoration-none text-danger fw-bold" routerLink="/auth/login">Login here!</a></p>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <form [formGroup]="registerForm" (ngSubmit)="onRegister(registerForm)" class="w-75">
+                        <div class="form-row">
+                            <ngx-dropzone [multiple]="false" no_multiple (change)="onSelect($event)" class="mb-0">
+                                <div [class]="!profileImgValue ? 'label_custom-style d-flex justify-content-center align-items-center ' : 'visually-hidden'">
+                                    <ngx-dropzone-label>
+                                        <i class="fa-solid fa-upload"></i>
+                                        <p class="text-center">Image</p>
+                                    </ngx-dropzone-label>
+                                </div>
+                                <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" [removable]="true" (removed)="onRemove(f)">
+                                    <ngx-dropzone-label></ngx-dropzone-label>
+                                </ngx-dropzone-image-preview>
+                            </ngx-dropzone>
+                        </div>
+                    
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="">User name</label>
+                                <input type="text" class="form-control" placeholder="Enter your user name" aria-label="username" formControlName="userName">
+                            </div>
+                            <mat-error *ngIf="registerForm.get('userName')?.errors && registerForm.get('userName')?.touched"
+                                    class="text-red m-0 mx-auto p-0 text-start block mt-1">
+                                    <span class="custom-error-style">{{getErrorMessageforName()}}</span>
+                                </mat-error>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="">Email</label>
+                                <input type="email" class="form-control" placeholder="Enter your email" aria-label="email"  formControlName="email">
+                            </div>
+                            <mat-error *ngIf="registerForm.get('email')?.errors && registerForm.get('email')?.touched"
+                            class="text-red m-0 mx-auto p-0 text-start block mt-1">
+                            <span class="text-red p-0" *ngIf="registerForm.get('email')?.getError('required')">Email is
+                              required</span>
+                            </mat-error>  
+                            
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="form-group col-md-5 ">
+                                <label class="">Phone number</label>
+                                <input type="tel" class="form-control" placeholder="Enter your phone number" aria-label="phone" formControlName="phoneNumber">
+                                <mat-error *ngIf="registerForm.get('phoneNumber')?.errors && registerForm.get('phoneNumber')?.touched"
+                                    class="text-red m-0 mx-auto p-0 text-start block mt-1">
+                                    <span class="custom-error-style">{{getErrorMessageForPhoneNumber()}}</span>
+                                </mat-error>
+                            </div>
+                            
+                            <div class="form-group col-md-5 ">
+                                <label class="">Country</label>
+                                <input type="text" class="form-control" placeholder="Enter your country" aria-label="country" formControlName="country">
+                                <mat-error *ngIf="registerForm.get('country')?.errors && registerForm.get('country')?.touched"
+                                    class="text-red m-0 mx-auto p-0 text-start block mt-1">
+                                    <span class="text-red p-0 block" *ngIf="registerForm.get('country')?.getError('required')">Country is
+                                    required</span>
+                                    <span class="custom-error-style">{{getErrorMessageForCountry()}}</span>
+                                </mat-error>
+                            </div>
+                            
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group position-relative">
+                                <label class="">Password</label>
+                                <input [type]="hidePass ? 'password' : 'text'" class="form-control" placeholder="Enter your password" aria-label="password" formControlName="password">
+                                <a class="show-password" (click)="this.hidePass= !this.hidePass">
+                                    <i class="fa-solid gray" [class]="hidePass?'fa-eye-slash':'fa-eye'"></i>
+                                </a>
+                            </div>
+                            <mat-error *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched"
+                                class="text-red m-0 mx-auto p-0 text-start block mt-1">
+                                <span class="text-red p-0 block" *ngIf="registerForm.get('password')?.getError('required')">Password is
+                                required</span>
+                                <span class="custom-error-style">{{getErrorMessageforPasswrod()}}</span>
+                            </mat-error>
+              
+                            
+                        </div>
+                        <div class="form-row mb-2">
+                            <div class="form-group position-relative">
+                                <label >Confirm password</label>
+                                <input [type]="hideConfirmPass ? 'password' : 'text'" class="form-control " placeholder="Enter your confirm password" aria-label="confirm-password" formControlName="confirmPassword">
+                                <a class="show-password" (click)="this.hideConfirmPass= !this.hideConfirmPass">
+                                    <i class="fa-solid gray" [class]="hideConfirmPass?'fa-eye-slash':'fa-eye'"></i>
+                                </a>
+                            </div>
+                            <mat-error *ngIf="registerForm.get('confirmPassword')?.errors && registerForm.get('confirmPassword')?.touched"
+                                class="text-red m-0 mx-auto p-0 text-start block mt-1">
+                                <span class="text-red p-0 block" *ngIf="registerForm.get('confirmPassword')?.getError('required')">Password is
+                                required</span>
+                                <span class="custom-error-style">{{getErrorMessageforPasswrod()}}</span>
+                            </mat-error>
+                            
+                        </div>
+                        <div class="form-row">
+                            <div>
+                                <button type="submit" class="btn btn-primary w-100" [disabled]="registerForm.invalid">Sign Up</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6 image_form border rounded-5 d-none d-md-flex justify-content-end flex-column p-5">
+                <div class="ms-5 text-white">
+                    <h3 class="title_form">Sign up to Roamhome</h3>
+                    <p class="fw-500 fs-5">Homes as unique as you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

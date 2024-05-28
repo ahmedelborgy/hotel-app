@@ -1,0 +1,63 @@
+@import'../../../assets/styles/layout';
+@import'../../../assets/styles/abstracts/navbar';
+
+
+.language-switcher {
+  display: inline-block;
+}
+
+.custom-select {
+  appearance: none;
+  background-color: $dark-blue;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0;
+  cursor: pointer;
+  
+}
+
+.custom-select:focus {
+  outline: none;
+}
+
+.custom-select option {
+  display: inline-block;
+  background-color: #fff;
+  color: $dark-blue;
+}
+
+.routerActive {
+color: $text-main;
+}
+
+.navbar-text {
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.logo {
+  span {
+    color: $text-main;
+  }
+}
+
+.add-button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add bottom shadow */
+  &:hover {
+    // background-color: #6aaaff44;
+    background-color: #fff;
+    color: $dark-blue;
+  }
+}
+
+
+

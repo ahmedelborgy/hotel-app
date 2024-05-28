@@ -1,0 +1,27 @@
+@import "./colors";
+
+.gray{
+    color: $gray-color;
+}
+.light-blue{
+   
+    background-color: $light-blue;
+}
+.text-light-blue{
+   
+    color: $light-blue;
+}
+.border-light-blue{
+   
+    border: solid 1px $light-blue;
+}
+.card{
+    width: 500px !important;
+}
+.font{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.text-dark-blue{
+    color: $dark-blue;
+}

@@ -1,0 +1,67 @@
+@import "../../../../assets/styles/layout";
+.show-password{
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+    transform: translate(-25%, -25%);
+  }
+
+
+
+.register {
+    .logo {
+        span {
+            color: $text-main;
+        }
+    }
+    .signup-design {
+        margin-left: 83px;
+    }
+    .image_form {
+        background-image: url("../../../../assets/images/signup.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    .row {
+        height: 100vh;
+        padding: 20px;
+    }
+    .title_form {
+        font-weight: 500;
+        font-size: 38px;
+        line-height: 45px;
+    }
+
+}
+label {
+    color: $dark-blue;
+  }
+.label_custom-style {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid $dark-blue;
+   
+  }
+  [_nghost-ng-c2040221903] {
+    background-color: red;
+    width: 130px !important;
+    height: 130px !important;
+    margin: 0 auto 0 auto;
+    color:$dark-blue;
+    background-color: transparent !important;
+    cursor: pointer;
+    color: $gray-color !important;
+    border: none !important;
+    border-radius: none !important;
+    font-size: 16px !important;
+    overflow-x: unset !important;
+  }
+  [_nghost-ng-c3821590306] img[_ngcontent-ng-c3821590306] {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+  }
+  

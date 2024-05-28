@@ -1,0 +1,57 @@
+<section id="allFacilities">
+    <div class="row py-5">
+        <div class="col-8">
+            <h2>Facilities Table Details</h2>
+            <p>You Can cheak all details</p>
+        </div>
+        <div class="col-4 text-end">
+            <button class="btn light-blue add-button text-white" (click)="openAddFacilitieDialog()">Add new facility</button>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="col">Name</th>
+                <th class="col">createdAt</th>
+                <th class="col">updatedAt</th>
+                <th class="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of tableData">
+                <td>{{item.name}}</td>
+              
+                <td>{{item.createdAt|date:'MMM d, y, h:mm:ss a'}}</td>
+                <td>{{item.updatedAt|date:'MMM d, y, h:mm:ss a'}}</td>
+               
+                <td>
+                    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                    <mat-icon>more_horiz</mat-icon>
+                  </button>
+                  <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="openViewFacilitieDialog(item)">
+                        <mat-icon class="text-primary">visibility</mat-icon>
+                        <span>View</span>
+                      </button>
+                      <button mat-menu-item (click)="openEditCategory(item)">
+                        <mat-icon class="text-primary">edit_square</mat-icon>
+                        <span>Edit</span>
+                      </button>
+                      <button mat-menu-item (click)="openDeleteAdsDialog(item)">
+                        <mat-icon class="text-primary">delete</mat-icon>
+                        <span>Delete</span>
+                      </button>
+                    </mat-menu>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <mat-paginator [length]="totalCount"
+     [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"
+     (page)="handlePageEvent($event)"
+    aria-label="Select page">
+</mat-paginator>
+</section>
+

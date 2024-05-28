@@ -1,0 +1,47 @@
+<section>
+  <div class="container">
+    <h2 class="text-center m-4 text-dark-blue">{{"all-rooms"|translate}}</h2>
+    <p class="gray">
+      <a routerLink="/landing-page/home" class="text-decoration-none gray">{{"nav-home"|translate}} </a>
+      /
+      <a routerLink="/landing-page/explore" class="text-decoration-none gray"> {{"nav-explore"|translate}}</a>
+    </p>
+    <h5 class="fw-bold text-dark-blue">{{"rooms"|translate}}</h5>
+  </div>
+  <section id="living-room">
+
+    <div class="container pe-5">
+      <div class="row">
+        <div class="col-10 col-sm-4 col-md-4 col-lg-3" *ngFor="let item of tableDataRooms">
+
+          <div class="imag-img3 w-100 ">
+
+            <img [src]="item.images[0]" class="w-100  imgHeight2 ">
+            <div class="imag-icon3 imgHeight2">
+              <a *ngIf="!(loginToFav === 'user' )" (click)="openDialog('100ms', '100ms')"
+                class=" text-decoration-none text-white"><i class="fa-solid fa-heart"></i></a>
+              <a *ngIf="loginToFav === 'user' " class=" text-decoration-none text-white"
+                (click)="onSaveFavRoom(item._id)"><i class="fa-solid fa-heart"></i></a>
+              <a class=" text-decoration-none text-white" [routerLink]="[ '/landing-page/details',item._id ]"><i
+                  class="fa-solid fa-eye "></i></a>
+            </div>
+            <div class="imag-price2 z-2 px-5">
+              <span>{{item.discount}}% {{"padge-ads"|translate}}</span>
+            </div>
+          </div>
+
+          <div class="w-100 ms-44">
+            <h5 class="mt-5">{{item.roomNumber}}</h5>
+            <p>Jakarta Indonesia</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class=" d-flex justify-content-center">
+    <mat-paginator [length]="totalCount" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+      (page)="handlePageEvent($event)" aria-label="Select page">
+    </mat-paginator>
+  </div>
+
+</section>

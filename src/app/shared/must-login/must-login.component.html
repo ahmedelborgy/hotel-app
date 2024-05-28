@@ -1,0 +1,32 @@
+<section class="p-4">
+  <div class="container">
+    <div class="d-flex justify-content-between gap-5">
+      <div class="header-auth logo mb-0">
+        <h3 class="mt-2 mb-4">Please register or sign in to continue.</h3>
+        <p class="h6">Login to put this in Favorites.</p>
+      </div>
+      <div>
+        <span (click)="onNoClick()"><i
+            class="pointer fa-regular fa-circle-xmark text-danger fa-2x position-absolute top-0 right-0 my-4"></i></span>
+      </div>
+    </div>
+    <div class="inputs-auth my-3 d-flex justify-content-around flex-md-row flex-column">
+
+      <button type="submit" class="btn btn-outline-main px-5 " (click)="login()" [routerLink]="['/auth/signin']">
+        Sign in
+      </button>
+      <button type="submit" class="btn btn-outline-main2 px-5 " (click)="register()" [routerLink]="['/auth/signup']">
+        Sign up
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- <section>
+  <div class="header-auth logo mb-0">
+    <h2 class="mb-0">Please register or sign in to continue.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  </div>
+</section> -->

@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light d-flex align-items-center">
+  <div class="container">
+
+    
+    
+    <div>
+      <h1 routerLink="/landing-page/home" class="logo style-font  mt-2"><span class="main-text mt-5">Stay</span>cation.
+      </h1>
+      
+
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mt-2 mt-lg-0 align-items-center">
+
+        <li class="nav-item">
+          <a class="nav-link navbar-text" routerLink="/landing-page/home" routerLinkActive="routerActive">{{"nav-home"|translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navbar-text" routerLink="/landing-page/explore" routerLinkActive="routerActive">{{"nav-explore"|translate}}</a>
+        </li>
+        <li class="nav-item" *ngIf="userRole">
+          <a class="nav-link navbar-text" routerLink="/landing-page/favorites"
+            routerLinkActive="routerActive">{{"nav-favs"|translate}}</a>
+        </li>
+
+        <li class="col-4 ms-3">
+          <button class="btn light-blue add-button" [routerLink]="'../'" *ngIf="!userRole"
+            (click)="login()">LoginNow</button>
+        </li>
+      </ul>
+      <!-- [src]="profileImage" -->
+      <div class="user d-flex justify-content-end align-items-center" *ngIf="userRole">
+        <img [src]="profileImage?profileImage:notfoundImage" class="picture">
+        <h6 class="ps-2 pt-2">{{userName}}</h6>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon> <span class="material-symbols-outlined">
+              expand_more
+            </span></mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/admin/change-password">
+            <mat-icon><span class="material-symbols-outlined icon">
+                lock_open
+              </span></mat-icon>
+            <span class="">{{"change-password"|translate}}</span>
+          </button>
+          <button mat-menu-item (click)="logout()">
+            <mat-icon><span class="material-symbols-outlined icon">logout</span></mat-icon>
+            <span class="">{{"Logout"|translate}}</span>
+          </button>
+        </mat-menu>
+      </div>
+      <div class="language-switcher">
+        <select class="custom-select" (change)="selectLang(lang.value)" #lang>
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  
+</nav>

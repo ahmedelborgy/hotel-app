@@ -1,0 +1,150 @@
+@import"../../../assets/styles/layout";
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 220px; /* Adjust the desired height for the image */
+    object-fit: cover;
+  }
+
+  .card-body {
+    position: relative;
+    color: white;
+    padding: 0;
+    border-radius: 10px;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+  }
+
+  .card-text {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+  }
+  .badge {
+    background-color: pink;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    position: absolute;
+    bottom: 198px;
+    right: 0;
+  }
+  @import '../../../assets/styles/layout';
+.picture{
+    border-radius: 25px;
+    padding: 10px 0;
+}
+.text{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    background-color: rgba(255, 73, 139, 1);
+    padding: 10px 40px;
+    border-radius: 15px;
+    color: white;
+}
+h4{
+     color:rgb(28, 58, 118);
+}
+h5{
+    color:rgb(28, 58, 118);
+
+}
+h3{
+
+    color:rgb(28, 58, 118);
+}
+p{
+    color:rgb(169, 169, 169)
+}
+.imgHeight2 {
+  height: 16rem;
+  border-radius: 15px;
+}
+
+.ms-44 {
+  margin-left: 33px;
+}
+
+// img
+
+
+.imag-img3 {
+  position: relative;
+  top: 33px;
+  left: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 380px;
+}
+
+
+.imag-icon3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  color: #fff;
+  background-color: rgba(19, 46, 95, 0.4);
+  top: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  border-radius: 15px;
+  transition: all .7s;
+  opacity: 0;
+  width: 100%;
+  margin-inline:auto ;
+  // height: 15.41rem;
+}
+
+.imag-icon3 i {
+  margin-right: 20px;
+  transform: scale(1.5);
+  font-size: 18px;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+.imag-icon3 i:hover {
+  color: rgb(28, 52, 102);
+}
+
+.imag-img3:hover .imag-icon3 {
+  opacity: 1;
+  top: 0%;
+  // bottom: .1%;
+
+}
+
+.imag-price2 {
+  background-color: rgba(255, 73, 139, 1);
+  color: #fff;
+  top: 0;
+  right: 0px;
+  padding: 10px 10px 4px 10px;
+  position: absolute;
+  border-radius: 0 16px 0 16px ;
+  transition: all .7s;
+  opacity: 1;
+}

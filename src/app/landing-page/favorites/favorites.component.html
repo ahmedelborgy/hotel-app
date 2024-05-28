@@ -1,0 +1,55 @@
+<section>
+  <div class="container">
+    <h2 class="text-center py-4">Your Favorites</h2>
+    <!-- <p>Home / Favorites</p> -->
+    <div>
+      <span class="h5 creatBy myPointer" [routerLink]="'../../'">{{"nav-home"|translate}}</span> <span
+        class="mx-4">/</span> <span class="h5 myPointer">{{"Favorites"|translate}}</span>
+    </div>
+    <div class="row">
+      <h4 class="mt-4 mb-3">Your Rooms</h4>
+
+      <!-- <div class="col-10 col-md-6 col-lg-4 col-xl-3 block mb-5"> -->
+      <!-- <div *ngFor="let item of tableFav" class="imag-img2 col-10 col-md-6 col-lg-4 col-xl-3">
+
+        <img [src]="item.images[0]" alt="" class="w-100 imgHeight2 rounded-4">
+        <div class="imag-icon">
+          <a class=" text-decoration-none text-white" (click)="removeFromFav(item._id)"><i
+              class="fa-solid fa-heart"></i></a>
+          <a class=" text-decoration-none text-white" [routerLink]="[ '/landing-page/details',item._id ]"><i
+              class="fa-solid fa-eye "></i></a>
+        </div>
+        <div class="imag-captain">
+          <h4 class=" text-white">{{item.roomNumber}}</h4>
+        </div>
+        <div class="imag-price px-5">
+          <p class="text-white">$ <span class="h6 text-white fw-bolder">{{item.price}}</span>
+            {{"padge-paragraph"|translate}}</p>
+        </div>
+      </div> -->
+      <!-- </div> -->
+      <div class="col-10 col-sm-4 col-md-4 col-lg-3" *ngFor="let item of tableFav">
+
+        <div class="imag-img3 w-100 ">
+
+          <img [src]="item.images[0]" class="w-100  imgHeight2 ">
+          <div class="imag-icon3">
+            <a class=" text-decoration-none text-white" (click)="removeFromFav(item._id)"><i
+                class="fa-solid fa-heart"></i></a>
+            <a class=" text-decoration-none text-white" [routerLink]="[ '/landing-page/details',item._id ]"><i
+                class="fa-solid fa-eye "></i></a>
+          </div>
+          <div class="imag-price2 px-5">
+            <p class="text-white">$ <span class="h6 text-white fw-bolder">{{item.price}}</span>
+              {{"padge-paragraph"|translate}}</p>
+          </div>
+        </div>
+
+        <div class="w-100 ms-44">
+          <h5 class="mt-5">{{item.roomNumber}}</h5>
+          <p>Jakarta Indonesia</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
